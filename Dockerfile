@@ -17,7 +17,7 @@ RUN cd target && \
 
 FROM open-liberty:kernel-java8-openj9
 
-COPY --chown=1001:0 --from=builder /config/ /config/
+COPY --chown=10000600:0 --from=builder /config/ /config/
 
 EXPOSE 9080
 EXPOSE 9443
