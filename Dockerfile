@@ -6,7 +6,7 @@ RUN cd /project && mvn -B install dependency:go-offline -DskipTests
 
 WORKDIR /project/user-app
 
-RUN mvn install -DskipTests
+#RUN mvn install -DskipTests
 
 RUN cd target && \
     unzip *.zip && \
