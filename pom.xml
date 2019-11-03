@@ -29,7 +29,6 @@
         <!-- Liberty configuration -->
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
-	<package.file>${project.build.directory}/${app.name}.zip</package.file>
     </properties>
     <dependencies>
         <!-- Open Liberty Features -->
@@ -137,7 +136,6 @@
                     <stripVersion>true</stripVersion>
                     <configFile>src/main/liberty/config/server.xml</configFile>
                     <looseApplication>true</looseApplication>
-                    <packageFile>${project.build.directory}/${app.name}.jar</packageFile>
                     <include>runnable</include>
                     <bootstrapProperties>
                         <default.http.port>${http.port}</default.http.port>
