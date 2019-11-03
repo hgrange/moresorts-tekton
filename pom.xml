@@ -29,6 +29,7 @@
         <!-- Liberty configuration -->
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
+	<version.openliberty-runtime>
     </properties>
     <dependencies>
         <!-- Open Liberty Features -->
@@ -129,7 +130,7 @@
                     <assemblyArtifact>
                         <groupId>${liberty.groupId}</groupId>
                         <artifactId>${liberty.artifactId}</artifactId>
-                        <version>${version.openliberty-runtime}</version>
+                        <version>19.0.0.10</version>
                         <type>zip</type>
                     </assemblyArtifact>
                     <serverName>defaultServer</serverName>
