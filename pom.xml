@@ -8,7 +8,7 @@
     <parent>
         <groupId>net.wasdev.wlp.maven.parent</groupId>
         <artifactId>liberty-maven-app-parent</artifactId>
-        <version>RELEASE</version>
+        <version>LATEST</version>
     </parent>
 
     <groupId>dev.appsody.starter.java-microprofile</groupId>
