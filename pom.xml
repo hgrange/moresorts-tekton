@@ -128,8 +128,8 @@
                 <artifactId>liberty-maven-plugin</artifactId>
                 <configuration>
                     <assemblyArtifact>
-                        <groupId>com.ibm.ws.liberty.test</groupId>
-                        <artifactId>liberty-maven-plugin</artifactId>
+                        <groupId>io.openliberty</groupId>
+                        <artifactId>openliberty-runtime</artifactId>
                         <version>19.0.0.10</version>
                         <type>zip</type>
                     </assemblyArtifact>
