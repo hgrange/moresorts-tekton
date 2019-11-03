@@ -19,7 +19,7 @@
     <dependencies>
         <!-- Open Liberty Features -->
         <dependency>
-            <groupId>io.openliberty.features</groupId>
+            <groupId>org.eclipse.microprofile</groupId>
             <artifactId>microProfile-3.0</artifactId>
             <type>esa</type>
         </dependency>
