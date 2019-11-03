@@ -1,4 +1,4 @@
-FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v1 as builder
+FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v2 as builder
 
 COPY . /project
 
