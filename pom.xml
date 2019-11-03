@@ -33,9 +33,10 @@
     <dependencies>
         <!-- Open Liberty Features -->
         <dependency>
-            <groupId>org.eclipse.microprofile</groupId>
+            <groupId>io.openliberty.features</groupId>
             <artifactId>microProfile-3.0</artifactId>
-            <version>3.0</version>
+            <version>19.0.0.10</version>
+            <type>esa</type>
             <scope>test</scope>
         </dependency>
         <!-- For tests -->
