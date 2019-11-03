@@ -2,8 +2,6 @@ FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v1 as builder
 
 COPY . /project
 
-RUN  /project/util/check_version build
-
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests
 
 WORKDIR /project/user-app
