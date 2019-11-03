@@ -29,6 +29,7 @@
         <!-- Liberty configuration -->
         <liberty.var.default.http.port>9080</liberty.var.default.http.port>
         <liberty.var.default.https.port>9443</liberty.var.default.https.port>
+	<package.file>${project.build.directory}/${app.name}.zip</package.file>
     </properties>
     <dependencies>
         <!-- Open Liberty Features -->
@@ -127,8 +128,8 @@
                 <artifactId>liberty-maven-plugin</artifactId>
                 <configuration>
                     <assemblyArtifact>
-                        <groupId>${liberty.groupId}</groupId>
-                        <artifactId>${liberty.artifactId}</artifactId>
+                        <groupId>com.ibm.ws.liberty.test</groupId>
+                        <artifactId>liberty-maven-plugin</artifactId>
                         <version>19.0.0.10</version>
                         <type>zip</type>
                     </assemblyArtifact>
@@ -136,8 +137,8 @@
                     <stripVersion>true</stripVersion>
                     <configFile>src/main/liberty/config/server.xml</configFile>
                     <looseApplication>true</looseApplication>
-                    <packageFile>${package.file}</packageFile>
-                    <include>${packaging.type}</include>
+                    <packageFile>${project.build.directory}/${app.name}.jar</packageFile>
+                    <include>runnable</include>
                     <bootstrapProperties>
                         <default.http.port>${http.port}</default.http.port>
                         <default.https.port>${https.port}</default.https.port>
