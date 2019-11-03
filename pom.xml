@@ -202,6 +202,23 @@
                     </reportsDirectory>
                 </configuration>
             </plugin>
+	     <plugin>
+    		<groupId>org.jboss.maven.plugins</groupId>
+    		<artifactId>maven-sleep-plugin</artifactId>
+    		<version>1.0</version>
+    		<executions>
+        		<execution>
+            			<id>sleep-5-seconds</id>
+            			<phase>pre-integration-test</phase>
+           			<goals>
+                			<goal>sleep</goal>
+            			</goals>
+            			<configuration>
+                 			<delay>50</delay>
+            			</configuration>
+        		</execution>
+   		</executions>
+	 </plugin>
         </plugins>
     </build>
 </project>
