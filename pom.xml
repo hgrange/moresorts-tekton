@@ -29,12 +29,7 @@
     </properties>
     <dependencies>
         <!-- Open Liberty Features -->
-	<dependency>
-  		<groupId>org.jboss.as.plugins</groupId>
-  		<artifactId>jboss-as-maven-plugin</artifactId>
-  		<version>7.9.Final</version>
-  		<type>maven-plugin</type>
-	</dependency>
+	
         <dependency>
             <groupId>io.openliberty.features</groupId>
             <artifactId>microProfile-3.0</artifactId>
@@ -208,23 +203,6 @@
                     </reportsDirectory>
                 </configuration>
             </plugin>
-	     <plugin>
-    		<groupId>org.jboss.maven.plugins</groupId>
-    		<artifactId>maven-sleep-plugin</artifactId>
-    		<version>1.0</version>
-    		<executions>
-        		<execution>
-            			<id>sleep-5-seconds</id>
-            			<phase>pre-integration-test</phase>
-           			<goals>
-                			<goal>sleep</goal>
-            			</goals>
-            			<configuration>
-                 			<delay>50</delay>
-            			</configuration>
-        		</execution>
-   		</executions>
-	 </plugin>
         </plugins>
     </build>
 </project>
