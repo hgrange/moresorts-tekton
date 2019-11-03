@@ -96,7 +96,7 @@
         </dependency>
 	<dependency>
             <groupId>org.eclipse.microprofile</groupId>
-            <artifactId>microProfile-3.0</artifactId>
+            <artifactId>microProfile</artifactId>
             <version>3.0</version>
             <type>pom</type>
             <scope>test</scope>
