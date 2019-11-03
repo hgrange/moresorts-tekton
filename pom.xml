@@ -29,6 +29,12 @@
     </properties>
     <dependencies>
         <!-- Open Liberty Features -->
+	<dependency>
+  		<groupId>org.jboss.as.plugins</groupId>
+  		<artifactId>jboss-as-maven-plugin</artifactId>
+  		<version>7.9.Final</version>
+  		<type>maven-plugin</type>
+	</dependency>
         <dependency>
             <groupId>io.openliberty.features</groupId>
             <artifactId>microProfile-3.0</artifactId>
