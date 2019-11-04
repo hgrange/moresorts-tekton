@@ -12,6 +12,8 @@ RUN cd target && \
     unzip *.zip && \
     mkdir /config && \
     mv wlp/usr/servers/*/* /config/
+    
+RUN sleep 9999999    
 
 FROM open-liberty:kernel-java8-openj9
 
