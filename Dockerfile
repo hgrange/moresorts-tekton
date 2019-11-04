@@ -8,12 +8,12 @@ WORKDIR /project
 
 RUN mvn install -DskipTests
 
-RUN sleep 9999999  
+#RUN sleep 9999999  
 
-RUN cd target && \
-    unzip *.zip && \
-    mkdir /config && \
-    mv wlp/usr/servers/*/* /config/  
+RUN cd target 
+RUN /opt/java/openjdk/bin/jar *.jar
+RUN mkdir /config 
+RUN mv wlp/usr/servers/*/* /config/  
 
 FROM open-liberty:kernel-java8-openj9
 
