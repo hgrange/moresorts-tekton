@@ -1,4 +1,4 @@
-FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v3 as builder
+FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v4 as builder
 
 COPY . /project
 
@@ -12,7 +12,7 @@ WORKDIR /project/target
   
 RUN pwd
 RUN ls -la
-RUN sleep 9999999
+#RUN sleep 9999999
 RUN /opt/java/openjdk/bin/jar -xvf starter-app.jar
 RUN mkdir /config 
 RUN mv wlp/usr/servers/*/* /config/  
