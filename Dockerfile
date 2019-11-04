@@ -8,9 +8,8 @@ WORKDIR /project
 
 RUN mvn install -DskipTests
 
-#RUN sleep 9999999  
-
 RUN cd target 
+RUN sleep 9999999  
 RUN /opt/java/openjdk/bin/jar -xvf *.jar
 RUN mkdir /config 
 RUN mv wlp/usr/servers/*/* /config/  
