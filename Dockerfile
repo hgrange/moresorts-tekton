@@ -4,11 +4,11 @@ COPY . /project
 
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests
 
-WORKDIR /project/target
+WORKDIR /project
 
 RUN mvn install -DskipTests
-
-RUN cd /project/target 
+RUN cd /project/target
+WORKDIR /project/target
   
 RUN pwd
 RUN ls -la
