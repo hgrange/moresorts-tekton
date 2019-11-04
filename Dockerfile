@@ -8,7 +8,7 @@ WORKDIR /project
 
 RUN mvn install -DskipTests
 
-#RUN sleep 9999999  
+RUN sleep 9999999  
 
 RUN cd target && \
     unzip *.zip && \
