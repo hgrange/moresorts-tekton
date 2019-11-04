@@ -4,14 +4,15 @@ COPY . /project
 
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests
 
-WORKDIR /project
+WORKDIR /project/target
 
 RUN mvn install -DskipTests
 
-RUN cd target 
-#RUN sleep 9999999  
+RUN cd /project/target 
+  
 RUN pwd
 RUN ls -la
+RUN sleep 9999999
 RUN /opt/java/openjdk/bin/jar -xvf starter-app.jar
 RUN mkdir /config 
 RUN mv wlp/usr/servers/*/* /config/  
