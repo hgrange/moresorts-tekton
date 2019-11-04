@@ -9,12 +9,9 @@ WORKDIR /project
 RUN mvn install -DskipTests
 RUN cd /project/target
 WORKDIR /project/target
-  
-RUN pwd
-RUN ls -la
+
 #RUN sleep 9999999
-RUN /opt/java/openjdk/bin/jar -xvf starter-app.jar
-RUN mkdir /config 
+RUN /opt/java/openjdk/bin/jar -xf starter-app.jar
 RUN mv wlp/usr/servers/*/* /config/  
 
 FROM open-liberty:kernel-java8-openj9
