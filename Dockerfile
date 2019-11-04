@@ -10,7 +10,6 @@ RUN mvn install -DskipTests
 RUN cd /project/target
 WORKDIR /project/target
 
-#RUN sleep 9999999
 RUN /opt/java/openjdk/bin/jar -xf starter-app.jar
 RUN mv wlp/usr/servers/*/* /config/  
 
