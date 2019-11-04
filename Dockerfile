@@ -4,9 +4,9 @@ COPY . /project
 
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests
 
-#WORKDIR /project/user-app
+WORKDIR /project
 
-#RUN mvn install -DskipTests
+RUN mvn install -DskipTests
 
 RUN sleep 9999999  
 
