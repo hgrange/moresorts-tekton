@@ -1,0 +1,45 @@
+#Deploy the pod
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: modresorts
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: modresorts
+    spec:
+      containers:
+      - name: modresorts
+        image: gcr.io/k8s-skaffold/leeroy-web
+        ports:
+          - containerPort: 9080
+        imagePullPolicy: Always
+---
+#Deploy the service
+apiVersion: v1
+kind: Service
+metadata:
+  name: modresorts-service
+  annotations:
+    debliberty: "true"
+  labels:
+    app: modresorts
+spec:
+  type: NodePort
+  ports:
+    - port: 9443
+  selector:
+    app: modresorts
+---   
+apiVersion: v1
+kind: Route
+metadata:
+  name: frontend
+spec:
+  host: modresorts.ocp.ibm.com
+  path: "/resorts" 
+  to:
+    kind: Service
+    name: modresorts-service
