@@ -43,3 +43,4 @@ spec:
   to:
     kind: Service
     name: modresorts-service
+    weight: 100
