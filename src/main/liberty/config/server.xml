@@ -7,5 +7,5 @@
     <httpEndpoint host="*" httpPort="${default.http.port}" 
         httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
     
-    <webApplication location="/config/app/starter-app.war" contextRoot="/resorts"/>
+    <webApplication location="/opt/ol/wlp/usr/servers/defaultServer/apps/starter-app.war" contextRoot="/resorts"/>
 </server>
