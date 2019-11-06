@@ -44,3 +44,12 @@ spec:
     kind: Service
     name: modresorts-service
     weight: 100
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: 2019-11-06T10:48:46Z
+      status: "True"
+      type: Admitted
+    host: modresorts.ocp.ibm.com
+    routerName: router
+    wildcardPolicy: None
