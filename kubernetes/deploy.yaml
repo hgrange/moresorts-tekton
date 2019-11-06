@@ -38,10 +38,10 @@ spec:
   selector:
     app: modresorts
 ---   
-apiVersion: v1
+apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: modresorts
+  name: modresorts-route
 spec:
   host: modresorts.ocp.ibm.com
   path: "/resorts" 
