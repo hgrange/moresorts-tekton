@@ -11,7 +11,8 @@ RUN cd /project/target
 WORKDIR /project/target
 
 RUN /opt/java/openjdk/bin/jar -xf starter-app.jar
-RUN mv wlp/usr/servers/*/* /config/  
+RUN mv wlp/usr/servers/*/* /config/ 
+RUN mkdir /config/configDropins
 
 FROM open-liberty:kernel-java8-openj9
 
