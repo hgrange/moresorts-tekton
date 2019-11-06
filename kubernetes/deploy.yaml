@@ -16,6 +16,8 @@ spec:
           value: /opt/ol/wlp/output/defaultServer/logs
         - name: WLP_USER_DIR
           value: /config
+        - name: WLP_OUTPUT_DIR
+          value: /opt/ol/wlp/output/defaultServer
         name: modresorts
         ports:
         - containerPort: 9080
