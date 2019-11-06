@@ -11,6 +11,11 @@ spec:
         app: modresorts
     spec:
       containers:
+      - env:
+        - name: LOGDIR
+          value: /opt/ol/wlp/output/defaultServer/logs
+        - name: WLP_USER_DIR
+          value: /config
       - name: modresorts
         image: docker-registry.ocp.ibm.com:5000/tekton/modresorts:v1
         ports:
