@@ -1,5 +1,4 @@
 FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v6 as builder
-USER  10000600:0
 COPY . /project
 
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests
@@ -18,6 +17,6 @@ RUN mkdir /logs
 FROM open-liberty:kernel-java8-openj9
 
 COPY --chown=10000600:0 --from=builder /config/ /config/
-
+COPY --chown=10000600:0 --from=builder /logs /logs
 EXPOSE 9080
 EXPOSE 9443
