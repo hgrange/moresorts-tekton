@@ -11,9 +11,11 @@ WORKDIR /project/target
 
 RUN /opt/java/openjdk/bin/jar -xf starter-app.jar
 RUN mv wlp/usr/servers/*/* /config/ 
+RUN whoami
 RUN  sudo chown -R 10000600:0 /config
 RUN mkdir /logs 
 RUN sudo chown -R 10000600:0 /logs
+
 
 FROM open-liberty:kernel-java8-openj9
 
