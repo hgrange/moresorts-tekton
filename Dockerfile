@@ -1,4 +1,4 @@
-FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v5 as builder
+FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v6 as builder
 USER  10000600:0
 COPY . /project
 
@@ -13,6 +13,7 @@ WORKDIR /project/target
 RUN /opt/java/openjdk/bin/jar -xf starter-app.jar
 RUN mv wlp/usr/servers/*/* /config/ 
 RUN chown -R 10000600:0 /config
+RUN mkdir /logs 
 
 FROM open-liberty:kernel-java8-openj9
 
