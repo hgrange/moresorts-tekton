@@ -15,6 +15,8 @@ RUN mv wlp/usr/servers/*/* /config/
 
 FROM open-liberty:kernel-java8-openj9
 COPY --chown=10000600:0 --from=builder /config/ /config/
+RUN mkdir -p /config/configDropins/defaults 
+RUN chmod 777 /config/configDropins/defaults
 
 EXPOSE 9080
 EXPOSE 9443
