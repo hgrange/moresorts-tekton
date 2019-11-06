@@ -29,9 +29,12 @@ metadata:
   labels:
     app: modresorts
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-    - port: 9443
+    - name: https
+      port: 9443
+      protocol: TCP
+      targetPort: 9443
   selector:
     app: modresorts
 ---   
