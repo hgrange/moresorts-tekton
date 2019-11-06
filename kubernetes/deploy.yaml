@@ -12,8 +12,6 @@ spec:
     spec:
       containers:
       - env:
-        - name: LOGDIR
-          value: /opt/ol/wlp/output/defaultServer/logs
         - name: WLP_OUTPUT_DIR
           value: /opt/ol/wlp/output/defaultServer
         name: modresorts
