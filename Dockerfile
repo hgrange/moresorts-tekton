@@ -1,4 +1,4 @@
-FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v7 as builder
+FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v8 as builder
 RUN cat /etc/passwd
 RUN id
 COPY . /project
