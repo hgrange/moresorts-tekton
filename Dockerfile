@@ -13,5 +13,5 @@ RUN mv wlp/usr/servers/*/* /config/
 
 FROM open-liberty:kernel-java8-openj9
 
-COPY --chown=10000600:0 --from=builder /config/ /opt/ol/wlp/usr/servers/defaultServer
+COPY --chown=1000060000:0 --from=builder /config/ /opt/ol/wlp/usr/servers/defaultServer
 EXPOSE 9443
