@@ -16,7 +16,7 @@ spec:
           value: /opt/ol/wlp/output/defaultServer
         name: modresorts
         ports:
-        - containerPort: 9080
+        - containerPort: 9443
         imagePullPolicy: Always
 ---
 #Deploy the service
