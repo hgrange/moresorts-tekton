@@ -1,4 +1,4 @@
-FROM  docker-registry:5000/adoptopenjdk/openjdk8-openj9:v9 as builder
+FROM  docker-registry.ocp.ibm.com:5000/adoptopenjdk/openjdk8-openj9:v9 as builder
 COPY . /project
 RUN cd /project && mvn -B install dependency:go-offline -DskipTests
 
