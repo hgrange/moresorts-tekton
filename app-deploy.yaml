@@ -5,7 +5,7 @@ metadata:
 spec:
   # Add fields here
   version: 1.0.0
-  applicationImage: docker-registry:5000/modresorts:v1
+  applicationImage: docker-registry:5000.iicparis.fr.ibm.com/modresorts:v1
   stack: java-microprofile
   service:
     type: NodePort
